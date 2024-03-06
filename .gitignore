@@ -231,3 +231,9 @@ modules.xml
 *.ipr
 
 # End of https://www.toptal.com/developers/gitignore/api/jetbrains+all,jetbrains,jetbrains+iml
+
+
+# Added by cargo
+
+/target
+/Cargo.lock
