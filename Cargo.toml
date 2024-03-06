@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[http]
+proxy = "127.0.0.1:18061" 
 
 [dependencies]
 async-std="1"
