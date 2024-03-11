@@ -4,6 +4,7 @@ use std::sync::Arc;
 use serde::Serialize;
 use tokio::sync::broadcast;
 use tokio::sync::broadcast::error::RecvError;
+use crate::connection::Leaving;
 use crate::Server;
 
 
@@ -18,7 +19,7 @@ impl Chats {
         Chats {name, publisher}
     }
 
-    pub fn join(&self, leaving: Arc<String>) -> Chats {
+    pub fn join(&self, leaving: Arc<Leaving>) -> Chats {
         let receiver = self.publisher.subscribe();
         Chats{
             publisher,
